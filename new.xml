@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cutf-8" ?>[D[[C[C[?>
-<personal information>
-<full name>
-[A[A[B[C[C[C[C[C[C[C[C[C[C first name="Dmitry" last name="Medved"/>
-<ag[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-
-[A[A<first name="Dmitry" last name="Medved"/>
-[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C<first name="Dmitry" last name="Medved"/>
+<personal_information>
+<first_name="Dmitry" last_name="Medved"/>
 <age="38"/>
-<nunber of pets="null"/>
-[A[C[C[C[m[B[D[D[D[D[D<future desire salary="1000"/>
-</personal information>
+<number_of_pets="null"/>
+<future_desire_salary="1000"/>
+</personal_information>

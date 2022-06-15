@@ -1,9 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <preferences>
-[A[C[C[C[C[C[C[C[C[<?xml version="1.0" encoding="utf-8"?>
-<preferences>
-<favorite movie="Taxi"/>
-[1;5l[1;5l<favourite TV show="Dr. House"/>
-<favorite food="Pizza/>
-<favorite time of the year="Summer"/>
-<country you would like to visit="USA"/>
+<favorite_movie="Taxi"/>
+<favourite_TV_show="Dr. House"/>
+<favorite_food="Pizza"/>
+<favorite_time_of_the_year="Summer"/>
+<country_you_would_like_to_visit="USA"/>
 </preferences>
