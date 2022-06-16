@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <personal_information>
-<first_name="Dmitry" last_name="Medved"/>
+<first_name="Dmitry"/>
+<last_name="Medved"/>
 <age="38"/>
 <number_of_pets="null"/>
 <future_desire_salary="1000"/>
