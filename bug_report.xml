@@ -1,1 +1,15 @@
-Hello
+<?xml version="1.0" encoding="utf-8"?>
+<bug_report>
+<bug_report="1"/>
+<Project"="www.ameno.ru"/>
+<Sammary="Search in the dream book on the main page, using Russian words, does not work correctly"/>
+<Number_version="0.0001"/>
+<Severity="Major"/>
+<Priority="Medium"/>
+<Status="New"/>
+<Reporter="Dmitry Medved"/>
+<Assign_to="Alex Bulat"/>
+<Steps_to_reproduce= "1. Open the main page of the site: http://www.ameno.ru/. At the bottom of the page we find the section: DREAM BOOK" "2. Enter a search term, such as "night" "3. Click the "Find" button"/>
+<Actual_result="The request was not validated"/>
+<Expected_Result="The search was successful, the description of the desired dream is shown correctly"
+</bug_report>
