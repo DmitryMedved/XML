@@ -1,0 +1,301 @@
+Git_Hub_XML. HW_1
+
+ 21. Создать внешний репозиторий c названием XML.
+https://github.com/DmitryMedved/XML
+
+ 22. Клонировать репозиторий XML на локальный компьютер.
+medved@DESKTOP-59DF4KB MINGW64 /c
+$ mkdir xml
+
+medved@DESKTOP-59DF4KB MINGW64 /c
+$ cd xml
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml
+$ git clone https://github.com/DmitryMedved/XML.git
+Cloning into 'XML'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml
+$ ls -la
+total 8
+drwxr-xr-x 1 medved 197121 0 Jun 14 22:18 ./
+drwxr-xr-x 1 medved 197121 0 Jun 14 22:18 ../
+drwxr-xr-x 1 medved 197121 0 Jun 14 22:19 XML/
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml
+$ cd xml
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ ls -la
+total 5
+drwxr-xr-x 1 medved 197121 0 Jun 14 22:19 ./
+drwxr-xr-x 1 medved 197121 0 Jun 14 22:21 ../
+drwxr-xr-x 1 medved 197121 0 Jun 14 22:19 .git/
+-rw-r--r-- 1 medved 197121 5 Jun 14 22:19 README.md
+
+ 23. Внутри локального XML создать файл “new.xml”.
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ touch new.xml
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ ls -la
+total 5
+drwxr-xr-x 1 medved 197121 0 Jun 14 22:25 ./
+drwxr-xr-x 1 medved 197121 0 Jun 14 22:25 ../
+drwxr-xr-x 1 medved 197121 0 Jun 14 22:19 .git/
+-rw-r--r-- 1 medved 197121 5 Jun 14 22:19 README.md
+-rw-r--r-- 1 medved 197121 0 Jun 14 22:25 new.xml
+
+ 24. Добавить файл под гит.
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new.xml
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git add new.xml
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   new.xml
+
+ 25. Закоммитить файл.
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git commit -m "add the new.xml"
+[main bc78412] add the new.xml
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.xml
+
+ 26. Отправить файл на внешний GitHub репозиторий.
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 282 bytes | 282.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/DmitryMedved/XML.git
+   b27740e..bc78412  main -> main
+
+ 27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ cat >> new.xml
+<?xml version="1.0" encoding="utf-8"?>
+<personal_information>
+<first_name="Dmitry"/>
+<last_name="Medved"/>
+<age="38"/>
+<number_of_pets="null"/>
+<future_desire_salary="1000"/>
+</personal information>
+
+ 28. Отправить изменения на внешний репозиторий.
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   new.xml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git add new.xml
+warning: LF will be replaced by CRLF in new.xml.
+The file will have its original line endings in your working directory
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   new.xml
+
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git commit -m "add the modified new.xml"
+[main 4e12861] add the modified new.xml
+ 1 file changed, 13 insertions(+)
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 498 bytes | 498.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/DmitryMedved/XML.git
+   bc78412..4e12861  main -> main
+
+ 29. Создать файл preferences.xml
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ touch preferences.xml
+
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ cat >> preferences.xml
+<?xml version="1.0" encoding="utf-8"?>
+<preferences>
+<favorite_movie="Taxi"/>
+<favourite_TV_show="Dr. House"/>
+<favorite_food="Pizza"/>
+<favorite_time_of_the_year="Summer"/>
+<country_you_would_like_to_visit="USA"/>
+</preferences>
+
+ 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ touch sklls.xml
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ cat >> sklls.xml
+<?xml version="1.0" encoding="utf-8"?>
+<information_learned_in_the_course>
+<information_learned_in_the_course="Git Bash" "Git Hub" "XML" "TXT" "JSON">
+</information_learned_in_the_course>
+
+32. Сделать коммит в одну строку.
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        preferences.xml
+        sklls.xml
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git add preferences.xml sklls.xml
+warning: LF will be replaced by CRLF in preferences.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in sklls.xml.
+The file will have its original line endings in your working directory
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   preferences.xml
+        new file:   sklls.xml
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git commit -m "add 2 xml files"
+[main 19f230b] add 2 xml files
+ 2 files changed, 13 insertions(+)
+ create mode 100644 preferences.xml
+ create mode 100644 sklls.xml
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 664 bytes | 664.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/DmitryMedved/XML.git
+   4e12861..19f230b  main -> main
+
+ 33. Отправить сразу 2 файла на внешний репозиторий.
+Уже отправлены в п.32
+
+ 34. На веб интерфейсе создать файл bug_report.xml.
+
+Создал.
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git fetch
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 660 bytes | 94.00 KiB/s, done.
+From https://github.com/DmitryMedved/XML
+   19f230b..78a481f  main       -> origin/main
+
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ git pull
+Updating 19f230b..78a481f
+Fast-forward
+ bug_report.xml | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 bug_report.xml
+
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/xml (main)
+$ ls -la
+total 13
+drwxr-xr-x 1 medved 197121   0 Jun 15 00:35 ./
+drwxr-xr-x 1 medved 197121   0 Jun 14 22:25 ../
+drwxr-xr-x 1 medved 197121   0 Jun 15 00:35 .git/
+-rw-r--r-- 1 medved 197121   5 Jun 14 22:19 README.md
+-rw-r--r-- 1 medved 197121   2 Jun 15 00:35 bug_report.xml
+-rw-r--r-- 1 medved 197121 728 Jun 15 00:03 new.xml
+-rw-r--r-- 1 medved 197121 284 Jun 15 00:14 preferences.xml
+-rw-r--r-- 1 medved 197121 386 Jun 15 00:20 sklls.xml
+
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+<?xml version="1.0" encoding="utf-8"?>
+<bug_report>
+<bug_report="1"/>
+<Project"="www.ameno.ru"/>
+<Sammary="Search in the dream book on the main page, using Russian words, does not work correctly"/>
+<Number_version="0.0001"/>
+<Severity="Major"/>
+<Priority="Medium"/>
+<Status="New"/>
+<Reporter="Dmitry Medved"/>
+<Assign_to="Alex Bulat"/>
+<Steps_to_reproduce= "1. Open the main page of the site: http://www.ameno.ru/. At the bottom of the page we find the section: DREAM BOOK" "2. Enter a search term, such as "night" "3. Click the "Find" button"/>
+<Actual_result="The request was not validated"/>
+<Expected_Result="The search was successful, the description of the desired dream is shown correctly"
+</bug_report>
+
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/XML (main)
+$ git fetch
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (13/13), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 9 (delta 4), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), 2.41 KiB | 123.00 KiB/s, done.
+From https://github.com/DmitryMedved/XML
+   83b05a2..855bf88  main       -> origin/main
+
+ 38. Синхронизировать внешний и локальный репозиторий XML
+medved@DESKTOP-59DF4KB MINGW64 /c/xml/XML (main)
+$ git pull
+Updating 83b05a2..855bf88
+Fast-forward
+ bug_report.xml | 16 +++++++++++++++-
+ new.xml        |  3 ++-
+ sklls.xml      |  2 +-
+ 3 files changed, 18 insertions(+), 3 deletions(-)
+
